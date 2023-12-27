@@ -12,8 +12,11 @@ import * as strings from 'GlossaryWebPartStrings';
 import Glossary from './components/Glossary';
 import { IGlossaryProps } from './components/IGlossaryProps';
 
+import { PropertyFieldListPicker, PropertyFieldListPickerOrderBy } from '@pnp/spfx-property-controls/lib/PropertyFieldListPicker';
+
 export interface IGlossaryWebPartProps {
   description: string;
+  list: string;
 }
 
 export default class GlossaryWebPart extends BaseClientSideWebPart<IGlossaryWebPartProps> {
@@ -30,7 +33,8 @@ export default class GlossaryWebPart extends BaseClientSideWebPart<IGlossaryWebP
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
         userDisplayName: this.context.pageContext.user.displayName,
-        context: this.context
+        context: this.context,
+        listGuid: this.properties.list,
       }
     );
 
@@ -110,6 +114,19 @@ export default class GlossaryWebPart extends BaseClientSideWebPart<IGlossaryWebP
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
+                }),
+                PropertyFieldListPicker('lists', {
+                  label: 'Select a list',
+                  selectedList: this.properties.list,
+                  includeHidden: false,
+                  orderBy: PropertyFieldListPickerOrderBy.Title,
+                  disabled: false,
+                  onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
+                  properties: this.properties,
+                  context: this.context as any,
+                 // onGetErrorMessage: null,
+                  deferredValidationTime: 0,
+                  key: 'listPickerFieldId'
                 })
               ]
             }

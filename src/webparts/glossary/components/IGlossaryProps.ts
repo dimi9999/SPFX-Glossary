@@ -7,4 +7,5 @@ export interface IGlossaryProps {
   hasTeamsContext: boolean;
   userDisplayName: string;
   context: WebPartContext;
+  listGuid: string;
 }

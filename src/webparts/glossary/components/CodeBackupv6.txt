@@ -1,0 +1,126 @@
+import * as React from 'react';
+import styles from './Glossary.module.scss';
+import { IGlossaryProps } from './IGlossaryProps';
+import { IGlossary } from '../../../interface';
+
+import { useEffect, useState } from 'react';
+import { getSP } from '../../../pnpjsConfig';
+import { SPFI } from '@pnp/sp';
+
+const Glossary = (props: IGlossaryProps) => {
+  const LOG_SOURCE = 'Glossary Web part';
+  const LIST_NAME = 'EWR Glossary';
+  let _sp: SPFI = getSP(props.context);
+
+  const [glossaryItems, setGlossaryItems] = React.useState<IGlossary[]>([]);
+
+  const getGlossaryItems = async () => {
+    const pageSize = 100;
+    let skip = 0;
+    const allItems: IGlossary[] = [];
+  
+    while (true) {
+      try {
+        // Use 'await' to resolve the promise returned by the items call
+        const items = await _sp.web.lists.getByTitle(LIST_NAME).items.orderBy('Title', true).top(pageSize).skip(skip)();
+  
+        // Check if items exists and has a results array
+        if (items && items.length > 0) {
+          // Map and add the items to the result array
+          allItems.push(
+            ...items.map((item) => {
+              return {
+                Id: item.Id,
+                TopFilter: item.TopFilter,
+                Title: item.Title,
+                Term: item.Term,
+                Tags: item.Tags,
+                Abbreviation_x002f_Acronym: item.Abbreviation_x002f_Acronym,
+                Definition: item.Definition,
+                Contact: item.Contact,
+                Category: item.Category,
+                ApprovalStatus: item.ApprovalStatus,
+                Synonyms: item.Synonyms,
+                Comments: item.Comments,
+              };
+            })
+          );
+  
+          // Increase the skip value for the next iteration
+          skip += pageSize;
+        } else {
+          // Break the loop if there are no more items
+          break;
+        }
+      } catch (error) {
+        // Handle errors, log them, or break the loop as needed
+        console.error('Error fetching items:', error);
+        break;
+      }
+    }
+  
+    setGlossaryItems(allItems);
+  };
+  useEffect(() => {
+    getGlossaryItems();
+  }, []);
+
+  return (
+    <div className={styles.glossary}>
+      {glossaryItems.map((item: IGlossary, index: number) => (
+        <div key={index} className={styles.GlossaryItemBox}>
+          {/* Glossary Item Loop */}
+          <div className={styles.GlossaryImage}>
+            <img
+              src="https://eastwestrailwaycouk.sharepoint.com/:i:/r/Integrated%20Management%20System/SiteAssets/IMS/img/EWR-Portal-Glossary-Banner-Background.jpg?csf=1&web=1&e=PWmFfx"
+              alt="IMS Glossary"
+            />
+            {/* Glossary Letter*/}
+            <span className={styles.GlossaryLetter}>{item.Title}</span>
+          </div>
+          {/* Popup Content Details */}
+          <div key={index} className={styles.GlossaryItem}>
+            {/* Glossary Item Loop */}
+            <div className={styles.GlossaryImage}>
+              <img
+                src="https://eastwestrailwaycouk.sharepoint.com/:i:/r/Integrated%20Management%20System/SiteAssets/IMS/img/EWR-Portal-Glossary-Banner-Background.jpg?csf=1&web=1&e=PWmFfx"
+                alt="IMS Glossary"
+              />
+              {/* Glossary Letter */}
+              <span className={styles.GlossaryLetter}>{item.Title}</span>
+            </div>
+            <div className={styles.GlossaryContent}>
+              {/* Glossary Term Title */}
+              <h2>{item.Title}</h2>
+              {/* Glossary Abbreviation */}
+              <h3>abbreviation: {item.Abbreviation_x002f_Acronym}</h3>
+              {/* Glossary Tags */}
+              <div className={styles.Tags}>
+                <div className={styles.Title}>Tags:</div>
+                <div className={styles.Content}>
+                  <ol>{item.Tags}</ol>
+                </div>
+              </div>
+              {/* Glossary Category */}
+              <div className={styles.Category}>
+                <div className={styles.Title}>Category:</div>
+                <div className={styles.Content}>
+                  <ol>{item.Category}</ol>
+                </div>
+              </div>
+              {/* Glossary Definition */}
+              <div className={styles.Definition}>
+                <div className={styles.Title}>Definition:</div>
+                <div className={styles.Content}>
+                  <p>{item.Definition}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Glossary;

@@ -1,34 +1,214 @@
 @import '~@fluentui/react/dist/sass/References.scss';
 
+$color_1: #fff;
+$font-family_1: 'calibriregular',sans-serif;
+$font-family_2: century gothic;
+$font-family_3: 'Century Gothic';
+
 .glossary {
-  overflow: hidden;
-  padding: 1em;
-  color: "[theme:bodyText, default: #323130]";
-  color: var(--bodyText);
-  &.teams {
-    font-family: $ms-font-family-fallbacks;
-  }
-}
-
-.welcome {
-  text-align: center;
-}
-
-.welcomeImage {
-  width: 100%;
-  max-width: 420px;
-}
-
-.links {
-  a {
-    text-decoration: none;
-    color: "[theme:link, default:#03787c]";
-    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
-
-    &:hover {
-      text-decoration: underline;
-      color: "[theme:linkHovered, default: #014446]";
-      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: flex-start;
+	font-family: $font-family_1;
+	flex-wrap: wrap;
+	.GlossaryItem {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		align-items: flex-start;
+		font-family: $font-family_1;
+		flex-basis: 100%;
+	}
+  .GlossaryItemBox {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		align-items: flex-start;
+		font-family: $font-family_1;
+		flex-basis: 25%;
+    .GlossaryImage {
+      position: relative;
+      flex-basis:100%;
+	  padding:10px;
+      
+      img {
+        max-width: 100%;
+        box-shadow:2px 5px 11px #000;
+      }
+      .btnPrimary {
+        background: #1799ff;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 65px;
+        left: 50%;
+        translate: -50%;
+        cursor:pointer;
+      }
     }
-  }
+	}
+	.GlossaryImage {
+		position: relative;
+    flex-basis:40%;
+		img {
+			max-width: 100%;
+		}
+	}
+	.GlossaryLetter {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		color: $color_1;
+		font-size: 20px;
+		font-family: GTWalsheimProBold;
+		font-weight: bold;
+		translate: -50% -30%;
+	}
+	.GlossaryContent {
+		padding: 30px;
+		letter-spacing: 1px;
+    flex-basis:60%;
+	}
+	h2 {
+		font-family: $font-family_3;
+		font-weight: bold;
+		font-size: 40px;
+		margin-top: 0;
+		margin-bottom: 0;
+		letter-spacing: 1px;
+	}
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 30px;
+		font-size: 16px;
+		font-weight: normal;
+	}
+	.btnPrimary {
+		background: #6ec896;
+		color: $color_1;
+		background: #6ec896;
+		color: $color_1;
+		padding: 15px 30px;
+	}
+	.Tags {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		.Title {
+			font-weight: bold;
+			flex-basis: 25%;
+		}
+		.Content {
+			flex-basis: 75%;
+		}
+		ol {
+			margin: 0 0 1.5em;
+			padding: 0;
+			counter-reset: item;
+			>li {
+				margin: 0;
+				padding: 0 0 0 2em;
+				text-indent: -2em;
+				list-style-type: none;
+				counter-increment: item;
+				letter-spacing: 1px;
+				&:before {
+					display: inline-block;
+					width: 1.5em;
+					padding-right: 0.5em;
+					font-weight: bold;
+					text-align: right;
+					content: counter(item) ".";
+				}
+			}
+		}
+	}
+	.Category {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		.Title {
+			font-weight: bold;
+			flex-basis: 25%;
+		}
+		.Content {
+			flex-basis: 75%;
+     		 font-size: 16px;
+		}
+		ol {
+			margin: 0 0 1.5em;
+			padding: 0;
+			counter-reset: item;
+			>li {
+				margin: 0;
+				padding: 0 0 0 2em;
+				text-indent: -2em;
+				list-style-type: none;
+				counter-increment: item;
+				letter-spacing: 1px;
+				&:before {
+					display: inline-block;
+					width: 1.5em;
+					padding-right: 0.5em;
+					font-weight: bold;
+					text-align: right;
+					content: counter(item) ".";
+				}
+			}
+		}
+	}
+	.Definition {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		.Title {
+			font-weight: bold;
+			flex-basis: 25%;
+		}
+		.Content {
+			flex-basis: 75%;
+		}
+		ol {
+			margin: 0 0 1.5em;
+			padding: 0;
+			counter-reset: item;
+			>li {
+				margin: 0;
+				padding: 0 0 0 2em;
+				text-indent: -2em;
+				list-style-type: none;
+				counter-increment: item;
+				letter-spacing: 1px;
+				&:before {
+					display: inline-block;
+					width: 1.5em;
+					padding-right: 0.5em;
+					font-weight: bold;
+					text-align: right;
+					content: counter(item) ".";
+				}
+			}
+		}
+	}
+
+	 // Pager
+	 .pager {
+		width: 100%;
+	 }
+  // Popup Styles
+}
+@media only screen and (max-width:880px) {
+	.glossary {
+		.GlossaryItemBox {
+			flex-basis: 50% !important;
+		}
+	}
 }

@@ -13,6 +13,7 @@
   },
   "externals": {},
   "localizedResources": {
-    "GlossaryWebPartStrings": "lib/webparts/glossary/loc/{locale}.js"
+    "GlossaryWebPartStrings": "lib/webparts/glossary/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }
 }

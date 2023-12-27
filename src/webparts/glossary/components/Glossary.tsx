@@ -2,77 +2,82 @@ import * as React from 'react';
 import styles from './Glossary.module.scss';
 import { IGlossaryProps } from './IGlossaryProps';
 import { IGlossary } from '../../../interface';
-
 import { useEffect, useState } from 'react';
 import { getSP } from '../../../pnpjsConfig';
-//import { escape } from '@microsoft/sp-lodash-subset';
 import { SPFI } from '@pnp/sp';
- 
+
 const Glossary = (props: IGlossaryProps) => {
-const LOG_SOURCE = 'Glossary Web part';
-// const LIST_NAME = 'IMS%20Glossary';
-   const LIST_NAME = 'EWR Glossary';
-let _sp:SPFI = getSP(props.context);
+  const LOG_SOURCE = 'Glossary Web part';
+  const LIST_NAME = 'EWR Glossary';
+  let _sp: SPFI = getSP(props.context);
 
-const startsWithChar = 'A'; // Change this to the desired starting character
- 
-const [glossaryItems, setGlossaryItems] = React.useState<IGlossary[]>([])
-const getGlossaryItems = async () => {
-  // const pageSize = 1700; // Number of items to fetch in each request
-  const pageSize = 100;
-  let skip = 0; // Initial value for skipping items
+  const [glossaryItems, setGlossaryItems] = React.useState<IGlossary[]>([]);
+  const [currentPage, setCurrentPage] = React.useState<number>(1);
+  const pageSize = 50; // Number of Glossary Items to display 
 
-  const allItems: IGlossary[] = [];
+  const getGlossaryItems = async () => {
+    try {
+      const skip = (currentPage - 1) * pageSize;
+      const items = await _sp.web.lists.getByTitle(LIST_NAME).items.orderBy('Title', true).top(pageSize).skip(skip)();
 
-  // Loop until all items are fetched
-  while (true) {
-      const items = await _sp.web.lists.getByTitle(LIST_NAME).items.top(pageSize).orderBy('Title',true).skip(skip)();
-      // .items.filter(`substringof('${startsWithChar}',Title)`)
-      
-      // Break the loop if no more items
-      if (items.length === 0) {
-          break;
-      }
-
-      // Map and add the items to the result array
-      allItems.push(
-          ...items.map((item) => {
-              return {
-                  Id: item.Id,
-                  TopFilter: item.TopFilter,
-                  Title: item.Title,
-                  Term: item.Term,
-                  Tags: item.Tags,
-                  Abbreviation_x002f_Acronym: item.Abbreviation_x002f_Acronym,
-                  Definition: item.Definition,
-                  Contact: item.Contact,
-                  Category: item.Category,
-                  ApprovalStatus: item.ApprovalStatus,
-                  Synonyms:item.Synonyms,
-                  Comments:item.Comments,
-
-              };
-          })
+      setGlossaryItems(
+        items.map((item: any) => ({
+          Id: item.Id,
+          TopFilter: item.TopFilter,
+          Title: item.Title,
+          Term: item.Term,
+          Tags: item.Tags,
+          Abbreviation_x002f_Acronym: item.Abbreviation_x002f_Acronym,
+          Definition: item.Definition,
+          Contact: item.Contact,
+          Category: item.Category,
+          ApprovalStatus: item.ApprovalStatus,
+          Synonyms: item.Synonyms,
+          Comments: item.Comments,
+        }))
       );
+    } catch (error) {
+      console.error('Error fetching items:', error);
+    }
+  };
 
-      // Increase the skip value for the next iteration
-      skip += pageSize;
-  }
+  useEffect(() => {
+    getGlossaryItems();
+  }, [currentPage]);
 
-  setGlossaryItems(allItems);
-};
+  const totalPages = Math.ceil(9000 / pageSize);
 
-useEffect(() => {
-  getGlossaryItems();
-},[])
-
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+  };
 
   return (
-    <div className={styles.glossary}> 
-    <h1>Welcome to EWR Glossary - Your Terms Defined</h1>
-    <pre>{JSON.stringify(glossaryItems,null,2)}</pre>
-    </div>
-  )
-}
-export default Glossary 
+    <div className={styles.glossary}>
+      {/* Render your glossary items here */}
+      {glossaryItems.map((item: IGlossary, index: number) => (
+       <div key={index} className={styles.GlossaryItemBox}>
+       {/* Glossary Item Loop */}
+       <div className={styles.GlossaryImage}>
+        <img src="https://eastwestrailwaycouk.sharepoint.com/:i:/r/Integrated%20Management%20System/SiteAssets/IMS/img/EWR-Portal-Glossary-Banner-Background.jpg?csf=1&web=1&e=PWmFfx" alt="IMS Glossary" />
+        {/* Glossary Letter*/}
+        <span className={styles.GlossaryLetter}>{item.Title}</span>
+         </div>
+      </div>
+        
+      ))}
 
+      {/* Pager component */}
+      <div className={styles.pager}>
+        <button disabled={currentPage === 1} onClick={() => handlePageChange(currentPage - 1)}>
+          Previous
+        </button>
+        <span>{currentPage}</span>
+        <button disabled={currentPage === totalPages} onClick={() => handlePageChange(currentPage + 1)}>
+          Next
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Glossary;
