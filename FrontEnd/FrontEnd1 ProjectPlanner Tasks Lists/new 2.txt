@@ -1,0 +1,12 @@
+Application Permission > Directory Read All
+HW Intranet - Graph Integration
+
+WAS: HW Intranet - Graph Integration
+NOW: graphintegration
+
+reply url: https://graphintegration.azurewebsites.net
+		   https://website.azurewebsites.net/base/pages/OAuthPage.aspx
+		   
+		   Use this reply url
+			
+		   https://hwconnect.sharepoint.com/*

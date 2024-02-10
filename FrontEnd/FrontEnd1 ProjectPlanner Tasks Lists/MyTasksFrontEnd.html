@@ -1,0 +1,397 @@
+﻿<style type="text/css">
+    #PlannerMenu {
+        margin: 0 0 30px 0;
+        width: 100%;
+    }
+
+        #PlannerMenu > div {
+            display: -ms-flex;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+            #PlannerMenu > div > div {
+                border: none;
+                display: flex;
+                flex: 0 0 33.3%;
+                box-sizing: border-box;
+            }
+
+                #PlannerMenu > div > div > div {
+                    background: #fff;
+                    margin: 5px;
+                    padding: 15px;
+                    border: 2px solid #ddd;
+                }
+
+                    #PlannerMenu > div > div > div a {
+                        display: table;
+                        vertical-align: top;
+                    }
+
+                        #PlannerMenu > div > div > div a:hover {
+                            text-decoration: none;
+                        }
+
+                        #PlannerMenu > div > div > div a > div {
+                            display: table-cell;
+                            vertical-align: top;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image {
+                            width: 50px;
+                            text-align: center;
+                            color: white;
+                            background: #b21bfd;
+                            height: 50px;
+                            max-height: 50px;
+                            Position: relative;
+                        }
+
+                            #PlannerMenu > div > div > div a > .media-left > div.image span {
+                                display: block;
+                                width: 100%;
+                                text-align: center;
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+
+                        #PlannerMenu > div > div > div a > div.content .heading {
+                            displaY: block;
+                            margin: 0 0 10px 0;
+                            color: black;
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+
+                        #PlannerMenu > div > div > div a > div.content {
+                            padding-left: 15px;
+                        }
+
+                            #PlannerMenu > div > div > div a > div.content .text {
+                                color: black;
+                                border: 0;
+                                padding: 0;
+                            }
+
+                        /* add bakcground colours to letters (title begins with '' */
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=A] {
+                            background: #757575;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=B] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=C] {
+                            background-color: darkmagenta;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=D] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=E] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=F] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=G] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=H] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=I] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=J] {
+                            background: #936507;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=K] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=L] {
+                            background: #2d874e;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=M] {
+                            background: #7a60f9;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=N] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=O] {
+                            background: darkmagenta;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=P] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=Q] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=R] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=S] {
+                            background-color: #1f8585;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=T] {
+                            background-color: #1f8585;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=U] {
+                            background: green;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=V] {
+                            background: #d111c3;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=W] {
+                            background: brown;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=X] {
+                            background: yellow;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=Y] {
+                            background: red;
+                        }
+
+                        #PlannerMenu > div > div > div a > .media-left > div.image[title^=Z] {
+                            background: orange;
+                        }
+</style>
+
+
+
+<div class="container">
+
+    <div id="PlannerMenu">
+        <div id="planner-content-wrapper"><div><div><a href="https://teams.microsoft.com/l/team/19%3a3c88c6f9a8304e1ba3c3f5900dab4cda%40thread.skype/conversations?groupId=9RrhJmVloUiQqlXyYyMpTZYAAvi5&amp;tenantId=0cccbf82-2f37-4e6e-b152-1b60bea0dc68"><div class="media-left"><div class="image" title="BB"><span id="upcaseheading" class="img">BB</span><!-- <img src="/sites/WizdomDemo/SiteAssets/imgs/tem-sites-001.png" class="media-object" style="width:60px"> --></div></div><div class="content media-body"><span class="heading">Better to Build your Plans</span><span class="text">Better to Build your Plans</span></div></a></div></div><div><div><a href="https://teams.microsoft.com/l/team/19%3a3c88c6f9a8304e1ba3c3f5900dab4cda%40thread.skype/conversations?groupId=CGMKjjEZ6kaQkOTZCJ0K2ZYAGaCS&amp;tenantId=0cccbf82-2f37-4e6e-b152-1b60bea0dc68"><div class="media-left"><div class="image" title="TD"><span id="upcaseheading" class="img">TD</span><!-- <img src="/sites/WizdomDemo/SiteAssets/imgs/tem-sites-001.png" class="media-object" style="width:60px"> --></div></div><div class="content media-body"><span class="heading">Training Dummy Plan</span><span class="text">Training Dummy Plan</span></div></a></div></div><div><div><a href="https://teams.microsoft.com/l/team/19%3a3c88c6f9a8304e1ba3c3f5900dab4cda%40thread.skype/conversations?groupId=DRxJ0nISR0CA6-4Cav5RTJYAEahh&amp;tenantId=0cccbf82-2f37-4e6e-b152-1b60bea0dc68"><div class="media-left"><div class="image" title="C"><span id="upcaseheading" class="img">C</span><!-- <img src="/sites/WizdomDemo/SiteAssets/imgs/tem-sites-001.png" class="media-object" style="width:60px"> --></div></div><div class="content media-body"><span class="heading">Concrete is going to be our first material</span><span class="text">Concrete is going to be our first material</span></div></a></div></div><div><div><a href="https://teams.microsoft.com/l/team/19%3a3c88c6f9a8304e1ba3c3f5900dab4cda%40thread.skype/conversations?groupId=a2eO7zOYEEyTGKUUjnvBlZYAHR84&amp;tenantId=0cccbf82-2f37-4e6e-b152-1b60bea0dc68"><div class="media-left"><div class="image" title="TD"><span id="upcaseheading" class="img">TD</span><!-- <img src="/sites/WizdomDemo/SiteAssets/imgs/tem-sites-001.png" class="media-object" style="width:60px"> --></div></div><div class="content media-body"><span class="heading">Training Dummy Plan 2</span><span class="text">Training Dummy Plan 2</span></div></a></div></div><div><div><a href="https://teams.microsoft.com/l/team/19%3a3c88c6f9a8304e1ba3c3f5900dab4cda%40thread.skype/conversations?groupId=oi0DH9F-3kyBJSPwCmTJWJYABNLL&amp;tenantId=0cccbf82-2f37-4e6e-b152-1b60bea0dc68"><div class="media-left"><div class="image" title="D"><span id="upcaseheading" class="img">D</span><!-- <img src="/sites/WizdomDemo/SiteAssets/imgs/tem-sites-001.png" class="media-object" style="width:60px"> --></div></div><div class="content media-body"><span class="heading">Density</span><span class="text">Density</span></div></a></div></div><div><div><a href="https://teams.microsoft.com/l/team/19%3a3c88c6f9a8304e1ba3c3f5900dab4cda%40thread.skype/conversations?groupId=u8JvijCO10eVqLfXX62HpJYAFH1s&amp;tenantId=0cccbf82-2f37-4e6e-b152-1b60bea0dc68"><div class="media-left"><div class="image" title="AP"><span id="upcaseheading" class="img">AP</span><!-- <img src="/sites/WizdomDemo/SiteAssets/imgs/tem-sites-001.png" class="media-object" style="width:60px"> --></div></div><div class="content media-body"><span class="heading">Another Plan</span><span class="text">Another Plan</span></div></a></div></div><div><div><a href="https://teams.microsoft.com/l/team/19%3a3c88c6f9a8304e1ba3c3f5900dab4cda%40thread.skype/conversations?groupId=yEQuLDP9Y0u3oieY_KK6lpYAArY_&amp;tenantId=0cccbf82-2f37-4e6e-b152-1b60bea0dc68"><div class="media-left"><div class="image" title="L"><span id="upcaseheading" class="img">L</span><!-- <img src="/sites/WizdomDemo/SiteAssets/imgs/tem-sites-001.png" class="media-object" style="width:60px"> --></div></div><div class="content media-body"><span class="heading">Let's create a nice barbeque</span><span class="text">Let's create a nice barbeque</span></div></a></div></div></div>
+    </div>
+    <div class="myWizdomButtons">
+        <a target="_blank" class="btn btn-primary" href="https://tasks.office.com/contentformula.com/en-US/Home/Planner/#/planhub" style="background-color:red!important">Go to My Office Planner</a>
+        <br />
+        <br />
+    </div>
+</div>
+
+
+
+
+
+<style type="text/css">
+    /*
+    -----------------------------------
+    (1) Hains Watts Planner Tasks Start
+    -----------------------------------
+    */
+    #myPlannerTasks {
+        width: 100%;
+    }
+
+        #myPlannerTasks h2 {
+            color: #000;
+            font-size: 18px;
+        }
+    /*
+    ------------------------------
+    Haines Watts Responsive Tables
+    ------------------------------
+    */
+
+    .responsiveTbl table {
+        text-align: center;
+        width: 100%;
+    }
+
+    .responsiveTbl tr {
+        background: #fff;
+    }
+
+        .responsiveTbl tr:nth-child(2n) {
+            background: #f2f2f2;
+        }
+
+        .responsiveTbl tr:hover .msg {
+            opacity: 1;
+            top: 0;
+        }
+
+    .responsiveTbl th,
+    .responsiveTbl td {
+        padding: 15px 20px;
+        vertical-align: middle;
+        text-align: left;
+    }
+
+        .responsiveTbl th:nth-child(2),
+        .responsiveTbl td:nth-child(2) {
+            text-align: left;
+        }
+
+    .responsiveTbl th {
+        background: #fff;
+        color: black;
+        font-weight: bold;
+        padding: 12px 20px;
+        text-align: left;
+        border-bottom: 2px solid #ccc;
+    }
+
+    /*
+    ------
+    Status
+    ------
+    */
+
+    .responsiveTbl .btn,
+    .responsiveTbl .status {
+        border: red;
+        border-radius: 25px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 8px;
+        height: 40px;
+        min-width: 100px;
+        text-align: center;
+        line-height: inherit;
+    }
+
+    .responsiveTbl .status {
+        border: none;
+        color: #fff;
+        background: red;
+        transition: box-shadow 0.3s linear;
+    }
+
+        .responsiveTbl .status:hover {
+            box-shadow: inset 0 0 0 25px #cc1d41;
+            color: #fff;
+        }
+
+        .responsiveTbl .status.completed {
+            background: rgb(0, 148, 50);
+            box-shadow: inset 0 50px 0 0 #009432;
+            color: #fff;
+        }
+
+    @media only screen and (max-width: 767px) {
+        .responsiveTbl .btn,
+        .responsiveTbl .status {
+            padding: 0;
+            border: none;
+            background: none;
+        }
+
+        .responsiveTbl .status {
+            color: #ff214f;
+        }
+
+        .responsiveTbl {
+            overflow: auto;
+        }
+
+            .responsiveTbl table {
+                width: 767px;
+            }
+    }
+
+    @media only screen and (max-width: 640px) {
+        .responsiveTbl table {
+            width: 640px;
+        }
+    }
+    /*
+    ---------------------------------
+    (1) Hains Watts Planner Tasks End
+    ---------------------------------
+    */
+</style>
+
+<!-- My Planner Tasks -->
+<section id="myPlannerTasks" class="section">
+    <div class="container">
+
+        <p>Ipsa expedita odio autem mollitia fugiat ad repudiandae, a, tempore voluptatibus eveniet maxime eligendi suscipit! Nemo, veritatis dolore nostrum exercitationem dolor illum.</p>
+        <div class="responsiveTbl">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Assigned By</th>
+                        <th>Task Title</th>
+                        <th>Description</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>info@haines.com</td>
+                        <td>Martyn Crooke</td>
+                        <td><span class="price">Description</span></td>
+                        <td>19/07/2019</td>
+                        <td><a href="#" class="status">In progress</span></td>
+                    </tr>
+                    <tr>
+                        <td>info@haines.com</td>
+                        <td>Alan Niven</td>
+                        <td><span class="price">Description</span></td>
+                        <td>19/07/2019</td>
+                        <td><a href="#" class="status">In progress</span></td>
+                    </tr>
+                    <tr>
+                        <td>info@haines.com</td>
+                        <td>Peter Raskopoulos</td>
+                        <td><span class="price">Description</span></td>
+                        <td>19/07/2019</td>
+                        <td><a href="#" class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>info@haines.com</td>
+                        <td>Huang Xiangdong</td>
+                        <td><span class="price">Description</span></td>
+                        <td>19/07/2019</td>
+                        <td><a href="#" class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>info@haines.com</td>
+                        <td>Prasun Banerjee</td>
+                        <td><span class="price">Description</span></td>
+                        <td>19/07/2019</td>
+                        <td><a href="#" class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>info@haines.com</td>
+                        <td>Sudip Chaterjee</td>
+                        <td><span class="price">Description</span></td>
+                        <td>19/07/2019</td>
+                        <td><a href="#" class="status completed">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

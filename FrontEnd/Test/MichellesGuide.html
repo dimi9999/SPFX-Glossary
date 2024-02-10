@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Table</title>
+    <!-- using google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
+    <!-- importing reset and custom css -->
+    <style type="text/css">
+        html {
+     box-sizing: border-box;
+}
+ *, *:before, *:after {
+     box-sizing: inherit;
+}
+ * {
+     max-height: 1000000px;
+     margin: 0;
+     padding: 0;
+}
+ body {
+     color: #333;
+     background: #e5e5e5;
+     font: 400 14px/1.7 "Montserrat", sans-serif;
+     min-width: 320px;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+}
+ img {
+     max-width: 100%;
+     height: auto;
+     vertical-align: top;
+}
+ .gm-style img {
+     max-width: none;
+}
+ @media only screen and (min-width: 1025px) {
+     a[href^=tel], a[href^=skype], a[href^=sms] {
+         cursor: default;
+         pointer-events: none;
+    }
+}
+/* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+     display: block;
+}
+ ol, ul {
+     list-style: none;
+}
+ blockquote, q {
+     quotes: none;
+}
+ blockquote:before, blockquote:after, q:before, q:after {
+     content: '';
+     content: none;
+}
+ table {
+     border-collapse: collapse;
+     border-spacing: 0;
+}
+ h1, h2, h3, h4, h5, h6 {
+     font-family: "Montserrat", sans-serif;
+     font-weight: 500;
+     margin: 0 0 10px;
+     color: #333;
+}
+ h1 {
+     font-size: 26px;
+}
+ h2 {
+     font-size: 24px;
+}
+ h3 {
+     font-size: 22px;
+}
+ h4 {
+     font-size: 18px;
+}
+ h5 {
+     font-size: 17px;
+}
+ h6 {
+     font-size: 15px;
+}
+ p {
+     margin: 0 0 20px;
+}
+ a {
+     color: #356ec7;
+     text-decoration: none;
+     transition: color 0.3s linear;
+}
+ a:hover, a:focus {
+     text-decoration: none;
+     color: #713b87;
+}
+ .container {
+     max-width: 1400px;
+     padding: 0 15px;
+     margin: 30px auto;
+}
+/* responsive table */
+ .responsiveTbl table {
+     text-align: center;
+     width: 100%;
+}
+ tr {
+     background: #fff;
+}
+ tr:nth-child(2n) {
+     background: #f2f2f2;
+}
+ tr:hover .msg {
+     opacity: 1;
+     top: 0;
+}
+ th, td {
+     padding: 15px 20px;
+     vertical-align: middle;
+}
+ th:nth-child(2), td:nth-child(2) {
+     text-align: left;
+}
+ th {
+     background: #356ec7;
+     color: #fff;
+     font-weight: 500;
+     text-transform: uppercase;
+     padding: 25px 20px;
+}
+ .price, .btn {
+     border: 1px solid #356ec7;
+     border-radius: 25px;
+     display: inline-block;
+     vertical-align: top;
+     padding: 8px;
+     min-width: 100px;
+     text-align: center;
+}
+ .btn {
+     border: none;
+     color: #fff;
+     background: #356ec7;
+     transition: box-shadow 0.3s linear;
+}
+ .btn:hover {
+     box-shadow: inset 0 0 0 25px #532c64;
+     color: #fff;
+}
+/* responsive using desktop first approach */
+ @media only screen and (max-width: 767px) {
+     .price, .btn {
+         padding: 0;
+         border: none;
+         background: none;
+    }
+     .btn {
+         color: #356ec7;
+    }
+     .responsiveTbl {
+         overflow: auto;
+    }
+     .responsiveTbl table {
+         width: 767px;
+    }
+}
+ @media only screen and (max-width: 640px) {
+     .responsiveTbl table {
+         width: 640px;
+    }
+}
+/*# sourceMappingURL=main.css.map */
+
+    </style>
+    <style type="text/css">
+        
+        .btn {
+            background:green!important;
+        }
+        .btn.btn-red {
+            background-color:red!important;
+        }
+        .btn.btn-orange {
+            background-color:orange!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- responsive table -->
+        <div class="holder">
+            <h2>Wizdom Test Guide</h2>
+            <p>You can use this to test your pages on ACME</p>
+            <div class="responsiveTbl">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Page</th>
+                            <th>Chrome/Firefox</th>
+                            <th>IE/Edge</th>
+                            <th>Tablet</th>
+                            <th>Mobile</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sidenav</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn btn-red">To be tested and fixed items must be populated</a></td>
+                        </tr>
+						<tr>
+                            <td>Header, Megamenu and Ribbons</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn orange">Small padding issue on company items</a></td>
+                        </tr>
+						
+                        <tr>
+                            <td> <a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Pages/Home.aspx">Homepage</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</a></td>
+                        </tr>
+						 <tr>
+                            <td> <a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Pages/Home-Page-v2.aspx">Homepage v2</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</a></td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/I_need_to/Pages/default.aspx">I Need to</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn btn-red">To be fixed</td>
+                        </tr>
+                        <tr>
+                            <td><A target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Our_Company">Company</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Pages/Strategy-and-Vision.aspx">Strategy and Vision</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Fail</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Pages/it-support-request.aspx">ΙΤ Support</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Fail (issue with upload button)</td>
+                            <td><a href="#" class="btn orange">To be Fixed</td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/blogs">Blogs</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested </td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Departments/">Departments</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</a></td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Departments/HR/Pages/default.aspx">HR</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn btn-orange">To be tested (faqs hover color)</a></td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/News/">NEWS</a></td>
+                            <td>Fail</td>
+                            <td>Scrollbar visible</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn btn-orange">Twitter and latest news not always load. to be fixed</a></td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/News/Pages/Heatwave-continues-in-London.aspx">NEWS PAGE - CONTINUE FROM HERE</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</a></td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Locations/">Locations</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</a></td>
+                        </tr>  
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Locations/Pages/London.aspx">Locations Page</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</a></td>
+                        </tr>  
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Locations/Pages/London.aspx">Locations Page With Banner</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</a></td>
+                        </tr> 
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Policies/">Policies</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</td>
+                        </tr> 
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Policies/Pages/Maternity-&-paternity-leave.aspx">Maternity and Paternity Leave</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/apps/Pages/default.aspx">Apps</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/apps/Pages/donec-malesuada.aspx">Apps Pag Details with Form</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</td>
+                        </tr>
+                        <tr>
+                            <td><a hef="https://cfcloud.sharepoint.com/sites/WizdomDemo/Communities/Pages/default.aspx">Communities</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a target="_blank" href="#" class="btn">Pass</td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Communities/Project_Alpha/Pages/default.aspx">Project Alpha</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</td>
+                        </tr>  
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Pages/mainCalendar.aspx">Events List</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">To be tested</td>
+                        </tr>  
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/Lists/ACME%20Calendar/EventDetailsForm.aspx?ID=2">Event Details</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">pass/td>
+                        </tr>
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/MyCourses">Courses</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn btn-red">pass</td>
+                        </tr>  
+                        <tr>
+                            <td><a target="_blank" href="https://cfcloud.sharepoint.com/sites/WizdomDemo/MyCourses/Pages/default.aspx#course=Sharepoint%20development_09a2406d-d88f-4ffa-9b5f-acca39955b8b">Course Details</a></td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td>Pass</td>
+                            <td><a href="#" class="btn">Pass</td>
+                        </tr>    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

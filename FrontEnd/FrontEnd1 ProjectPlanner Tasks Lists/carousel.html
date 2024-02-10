@@ -1,0 +1,689 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Haines Watts</title>
+      <!-- using google font -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+      <!-- using font awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <!-- UI Fabric -->
+      <link rel="stylesheet" href="css/fabric.css" />
+      <!-- using custom css -->
+      <link rel="stylesheet" href="css/stylesheets.css" />
+   </head>
+   <body>
+      <div id="wrapper">
+         <!-- Sharepoint Only -->
+         <div id="sharepointHeader">
+            <!-- logo -->
+            <div id="logo">
+               <h1 class="header-logo">
+                  <a href="#">Sharepoint</a>
+               </h1>
+            </div>
+            <!-- searchbox -->
+            <div id="searchbox">
+               <form id="searchForm" class="search-form">
+                  <button class="search-button"><i class="ms-Icon ms-Icon--Search"></i></button>
+                  <input type="text" placeholder="Search resources, services and docs">
+               </form>
+            </div>
+            <div id="buttonsContainer">
+               <!-- header buttons -->
+               <div id="buttons">
+                  <div>
+                     <a href="#" title="powershell commands">
+                     <i class="ms-Icon ms-Icon--Devices3"></i>
+                     </a>
+                  </div>
+                  <div>
+                     <a href="#">
+                     <i class="ms-Icon ms-Icon--Filter"></i>
+                     </a>
+                  </div>
+                  <div>
+                     <a href="#" title="Notifications">
+                     <i class="ms-Icon ms-Icon--Ringer"></i>
+                     </a>
+                  </div>
+                  <div>
+                     <a href="#" title="Settings">
+                     <i class="ms-Icon ms-Icon--Settings"></i>
+                     </a>
+                  </div>
+                  <div>
+                     <a href="#" title="Who is who">
+                     <i class="ms-Icon ms-Icon--StatusCircleQuestionMark"></i>
+                     </a>
+                  </div>
+                  <div>
+                     <a href="#">
+                     <i class="ms-Icon ms-Icon--Emoji2"></i>
+                     </a>
+                  </div>
+               </div>
+               <!-- logged in user -->
+               <div id="user">
+                  <div class="userDetailsLoggedIn">
+                     <a class="userEmail" href="#">wizdom.support@test.com</a>
+                     <a class="userDetails" href="#">Gamasignature</a>
+                  </div>
+                  <div class="userAvatar">
+                     <div class="Avatar"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="width:100%; background:#fff; height:40px;"></div>
+         <!-- header start -->
+         <header id="header">
+            <div class="container">
+               <button class="navbar-toggler hidden-lg" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="glyphicon glyphicon-menu-hamburger"></span>
+               </button>
+               <div class="logo">
+                  <a href="#"> 
+                  <img src="img/hw-logo.png" alt="test" />
+                  </a>
+               </div>
+               <!-- Seacrh form start -->
+               <div class="searchbox">
+                  <form method="post" action="#">
+                     <input type="text" placeholder="Search" />
+                     <button class="fa fa-search"></button>
+                  </form>
+               </div>
+               <!-- Seacrh form end -->
+               <!-- navbar (use bootstrap) start  -->
+               <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                     <li class="nav-item"><a class="nav-link" href="#">MyConnect</a></li>
+                     <li class="nav-item"><a class="nav-link" href="#">Our People &amp; Offices</a></li>
+                     <li class="nav-item"><a class="nav-link" href="#">Our Business</a></li>
+                     <li class="nav-item"><a class="nav-link" href="#">Client Serives</a></li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Internal Services</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                           <a class="dropdown-item" href="#">Action</a>
+                           <a class="dropdown-item" href="#">Another action</a>
+                           <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+               <!-- navbar (use bootstrap) end  -->
+               <div class="clearfix"></div>
+            </div>
+         </header>
+         <!-- header end -->
+         <!-- breadcrumbs start -->
+         <div id="breadcrumbs">
+            <div class="container">
+               <ul>
+                  <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>News</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span>Question</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>Vacancy</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span>New Employee</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>My Tasks</a></li>
+               </ul>
+            </div>
+         </div>
+         <!-- breadcrumbs end -->
+         <main>
+            <div id="main">
+               <section id="mySlider" class="slider container">
+                  <!-- Carousel Start -->
+                  <div id="carousel-example-generic" class="carousel slider slide" data-ride="carousel">
+                     <!-- Indicators -->
+                     <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                     </ol>
+                     <!-- Wrapper for slides -->
+                     <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                           <img src="img/TaxAdvice.jpg" alt="slider1" class="fullwidth margin-auto">
+                           <div class="carousel-caption">
+                              <h3 class="f-xxlarge">Title goes here</h3>
+                              <p>Content text / goes here</p>
+                           </div>
+                           <div class="overlay"></div>
+                        </div>
+                        <div class="item">
+                           <img src="img/img-hero.jpg" alt="slider1" class="fullwidth margin-auto">
+                           <div class="carousel-caption">
+                              <h3 class="f-xxlarge">Title goes here</h3>
+                              <p>Content text / goes here</p>
+                           </div>
+                           <div class="overlay"></div>
+                        </div>
+                        <div class="item">
+                           <img src="img/img-hero.jpg" alt="slider1" class="fullwidth margin-auto">
+                           <div class="carousel-caption">
+                              <h3 class="f-xxlarge">Title goes here</h3>
+                              <p>Content text / goes here</p>
+                           </div>
+                           <div class="overlay"></div>
+                        </div>
+                     </div>
+                     <!-- Carousel End -->
+                     <!-- Controls -->
+                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                     </a>
+                  </div>
+            </div>
+            </section>
+            <!-- MAIN CONTENT -->
+            <section id="main-content" class="section">
+               <div class="container">
+                  <div id="tileWrapper" class="col-lg-8 col-md-12 col-sm-12 left-column">
+                     <h3>News</h3>
+                     <div class="tile-wrapper-inner">
+                        <div id="tileFirstRow" class="col-md-12">
+                           <div id="tile1" class="col-sm-8 block-lg" style="background-image: url('./img/TaxAdvice.jpg')">
+                              <div class="tile-news">
+                                 <a href="https://hwconnect.sharepoint.com/News/Pages/Tax-Tips-and-Advice-Issues-13-17-2019.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Tax-Tips-and-Advice-Issues-13-17-2019.aspx">
+                                    <p class="line-clamp line-clamp-3 ng-binding">Tax Tips and Advice Issues 13-17 2019</p>
+                                    <p>
+                                       <small class="ng-binding">
+                                       11 Jun 2019
+                                       </small>
+                                    </p>
+                                    <p class="news-author ng-binding">by National Office</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div id="tile2" class="col-sm-4 block-sm">
+                              <div class="tile-news">
+                                 <a href="https://hwconnect.sharepoint.com/News/Pages/Partner-Conference-Slides-2019.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Partner-Conference-Slides-2019.aspx">
+                                    <p class="line-clamp line-clamp-3 ng-binding">Partner Conference Slides 2019</p>
+                                    <p>
+                                       <small class="ng-binding">
+                                       11 Jun 2019
+                                       </small>
+                                    </p>
+                                    <p class="news-author ng-binding">by National Office</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div id="tile3" class="col-sm-4 block-sm">
+                              <div class="tile-news">
+                                 <a href="https://hwconnect.sharepoint.com/News/Pages/This-Weeks-Top-Deals1006.aspx" href="https://hwconnect.sharepoint.com/News/Pages/This-Weeks-Top-Deals1006.aspx">
+                                    <p class="line-clamp line-clamp-3 ng-binding">This Weeks Top Deals</p>
+                                    <p>
+                                       <small class="ng-binding">
+                                       10 Jun 2019
+                                       </small>
+                                    </p>
+                                    <p class="news-author ng-binding">by Alice Wilson</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- newd block added begins -->
+                        <div id="extra_tileFirstRow" class="col-md-12">
+                           <div id="extra_tile1" class="col-sm-8 block-lg" style="background-image: url('./img/Xero-Logo.png')">
+                              <div class="tile-news">
+                                 <a href="https://hwconnect.sharepoint.com/News/Pages/Xero-U-to-Xero-Central.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Xero-U-to-Xero-Central.aspx">
+                                    <p class="line-clamp line-clamp-3 ng-binding">Xero U to Xero Central</p>
+                                    <p>
+                                       <small class="ng-binding">10 Jun 2019</small>
+                                    </p>
+                                    <p class="news-author ng-binding">by National Office</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div id="extra_tile2" class="col-sm-4 block-sm">
+                              <div class="tile-news">
+                                 <a href="https://hwconnect.sharepoint.com/News/Pages/Haines-Watts-Group-Pension-Scheme-Webinar.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Haines-Watts-Group-Pension-Scheme-Webinar.aspx">
+                                    <p class="line-clamp line-clamp-3 ng-binding">Haines Watts Group Pension Scheme Webinar</p>
+                                    <p>
+                                       <small class="ng-binding">07 Jun 2019</small>
+                                    </p>
+                                    <p class="news-author ng-binding">by National Office</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div id="extra_tile3" class="col-sm-4 block-sm">
+                              <div class="tile-news">
+                                 <a href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx">
+                                    <p class="line-clamp line-clamp-3 ng-binding">Intranet Update No 2019.20 - Revised</p>
+                                    <p>
+                                       <small class="ng-binding">06 Jun 2019</small>
+                                    </p>
+                                    <p class="news-author ng-binding">by National Office</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="clearfix"></div>
+                           <!-- STICKY NEWS 13/06/2019 START -->
+                           <!-- COLLAPSE AREA -->
+                           <div class="hw-btn-area">
+                              <button type="button" onclick="btnSlideDownStickyNews()" id="btnNews-slide-down" class="center-block btn-hw-md update-btn">
+                              Load More
+                              <span class="glyphicon glyphicon-menu-down"></span>
+                              </button>
+                              <button type="button" onclick="btnSlideUpStickyNews()" id="btnNews-slide-up" class="center-block btn-hw-md update-btn" style="display:none">
+                              Load Less
+                              <span class="glyphicon glyphicon-menu-up"></span>
+                              </button>
+                           </div>
+                           <div id="stickyNews-collapse-section">
+                              <div>
+                                 <!-- NEW BLOCK -->
+                                 <div class="col-sm-4 block-sm">
+                                    <div class="tile-news">
+                                       <a href="https://hwconnect.sharepoint.com/News/Pages/Haines-Watts-Group-Pension-Scheme-Webinar.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Haines-Watts-Group-Pension-Scheme-Webinar.aspx">
+                                          <p class="line-clamp line-clamp-3 ng-binding">Haines Watts Group Pension Scheme Webinar</p>
+                                          <p>
+                                             <small class="ng-binding">07 Jun 2019</small>
+                                          </p>
+                                          <p class="news-author ng-binding">by National Office</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-4 block-sm">
+                                    <div class="tile-news">
+                                       <a href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx">
+                                          <p class="line-clamp line-clamp-3 ng-binding">Intranet Update No 2019.20 - Revised</p>
+                                          <p>
+                                             <small class="ng-binding">06 Jun 2019</small>
+                                          </p>
+                                          <p class="news-author ng-binding">by National Office</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-4 block-sm">
+                                    <div class="tile-news">
+                                       <a href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx">
+                                          <p class="line-clamp line-clamp-3 ng-binding">Intranet Update No 2019.20 - Revised</p>
+                                          <p>
+                                             <small class="ng-binding">06 Jun 2019</small>
+                                          </p>
+                                          <p class="news-author ng-binding">by National Office</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-4 block-sm">
+                                    <div class="tile-news">
+                                       <a href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx">
+                                          <p class="line-clamp line-clamp-3 ng-binding">Intranet Update No 2019.20 - Revised</p>
+                                          <p>
+                                             <small class="ng-binding">06 Jun 2019</small>
+                                          </p>
+                                          <p class="news-author ng-binding">by National Office</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-4 block-sm">
+                                    <div class="tile-news">
+                                       <a href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx">
+                                          <p class="line-clamp line-clamp-3 ng-binding">Intranet Update No 2019.20 - Revised</p>
+                                          <p>
+                                             <small class="ng-binding">06 Jun 2019</small>
+                                          </p>
+                                          <p class="news-author ng-binding">by National Office</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-4 block-sm">
+                                    <div class="tile-news">
+                                       <a href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2019-20---Revised-M.aspx">
+                                          <p class="line-clamp line-clamp-3 ng-binding">Intranet Update No 2019.20 - Revised</p>
+                                          <p>
+                                             <small class="ng-binding">06 Jun 2019</small>
+                                          </p>
+                                          <p class="news-author ng-binding">by National Office</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- STICKY NEWS 13/06/2019 END -->
+                        </div>
+                        <!-- news block added ends -->
+                        <div class="otherNews">
+                           <h3>Regional News</h3>
+                           <div id="tileSecondRowLeft" class="col-md-12">
+                              <div id="tile4" class="col-sm-4 block-sm">
+                                 <div class="tile-news">
+                                    <a href="https://hwconnect.sharepoint.com/News/Pages/Welcome-to-new-Joiners!.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Welcome-to-new-Joiners!.aspx">
+                                       <p class="line-clamp line-clamp-3 ng-binding">Welcome to new Joiners!</p>
+                                       <p>
+                                          <small class="ng-binding">
+                                          10 Jun 2019 - London &amp; M25
+                                          </small>
+                                       </p>
+                                       <p class="news-author ng-binding">by Maria Michael</p>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div id="tile5" class="col-sm-4 block-sm">
+                                 <div class="tile-news">
+                                    <a href="https://hwconnect.sharepoint.com/News/Pages/Welcome-to-our-recent-new-starters!.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Welcome-to-our-recent-new-starters!.aspx">
+                                       <p class="line-clamp line-clamp-3 ng-binding">Welcome to our recent new starters!</p>
+                                       <p>
+                                          <small class="ng-binding">
+                                          28 May 2019 - London &amp; M25
+                                          </small>
+                                       </p>
+                                       <p class="news-author ng-binding">by Maria Michael</p>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div id="tile5a" class="col-sm-4 block-sm">
+                                 <div class="tile-news">
+                                    <a href="https://hwconnect.sharepoint.com/News/Pages/Welcome-to-Dominic-Bramble!.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Welcome-to-Dominic-Bramble!.aspx">
+                                       <p class="line-clamp line-clamp-3 ng-binding">Welcome to Dominic Bramble!</p>
+                                       <p>
+                                          <small class="ng-binding">
+                                          01 May 2019 - London &amp; M25
+                                          </small>
+                                       </p>
+                                       <p class="news-author ng-binding">by Maria Michael</p>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <h3>Local News</h3>
+                           <div id="tileSecondRowLeft" class="col-md-12">
+                              <div id="tile6" class="col-sm-4 block-sm">
+                                 <div class="tile-news">
+                                    <a href="https://hwconnect.sharepoint.com/News/Pages/Welcome-to-Dominic-Bramble!.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Welcome-to-Dominic-Bramble!.aspx">
+                                       <p class="line-clamp line-clamp-3 ng-binding">Welcome to Dominic Bramble!</p>
+                                       <p>
+                                          <small class="ng-binding">
+                                          01 May 2019 - London
+                                          </small>
+                                       </p>
+                                       <p class="news-author ng-binding">by Maria Michael</p>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div id="tile7" class="col-sm-4 block-sm">
+                                 <div class="tile-news">
+                                    <a href="https://hwconnect.sharepoint.com/News/Pages/Carly-Liston---New-Partner-in-Huntingdon.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Carly-Liston---New-Partner-in-Huntingdon.aspx">
+                                       <p class="line-clamp line-clamp-3 ng-binding">Carly Liston - Partnership</p>
+                                       <p>
+                                          <small class="ng-binding">
+                                          01 Apr 2019 - London
+                                          </small>
+                                       </p>
+                                       <p class="news-author ng-binding">by Simon Laskey</p>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div id="tile7a" class="col-sm-4 block-sm">
+                                 <div class="tile-news">
+                                    <a href="https://hwconnect.sharepoint.com/News/Pages/Regional-update-London-Acquisition.aspx" href="https://hwconnect.sharepoint.com/News/Pages/Regional-update-London-Acquisition.aspx">
+                                       <p class="line-clamp line-clamp-3 ng-binding">Regional update: London Acquisition</p>
+                                       <p>
+                                          <small class="ng-binding">
+                                          09 Nov 2018 - London
+                                          </small>
+                                       </p>
+                                       <p class="news-author ng-binding">by Michael Davidson</p>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <a href="/News" class="pull-right hw-all-news">
+                     View all News
+                     </a>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-4 right-column">
+                     <div id="Notifications">
+                        <h3>Notifications</h3>
+                        <div class="hw-need-to-read">
+                           <div id="hw-need-to-read-content">
+                              <div class="panel panel-default">
+                                 <div class="panel-body">
+                                    <!--Office info-->
+                                    <!--Promotions part-->
+                                    <!-- ngRepeat: promotion in Promotions -->
+                                    <div class="notificationPromotion ng-scope" ng-repeat="promotion in Promotions">
+                                       <pp-promotion item="promotion" class="ng-isolate-scope">
+                                          <div style="min-height: 93.5px;">
+                                             <table>
+                                                <tbody>
+                                                   <tr>
+                                                      <td><img src="https://hwconnect.sharepoint.com/PublishingImages/Promotion%20Images/statementofindependence.png?csf=1" style=""></td>
+                                                      <td style="padding-left: 12px;"><a href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-2018-42---Annual-Declarations-2019.aspx" class="ng-binding" style="">Click here to complete your Statement of Independence</a></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </pp-promotion>
+                                    </div>
+                                    <!-- end ngRepeat: promotion in Promotions -->
+                                    <div class="notificationPromotion ng-scope" ng-repeat="promotion in Promotions">
+                                       <pp-promotion item="promotion" class="ng-isolate-scope">
+                                          <div style="min-height: 93.5px;">
+                                             <table>
+                                                <tbody>
+                                                   <tr>
+                                                      <td><img src="https://hwconnect.sharepoint.com/PublishingImages/Promotion%20Images/IntranetUpdate2.png?csf=1" style=""></td>
+                                                      <td style="padding-left: 12px;"><a href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-2019-17---2019-ICAEW-Annual-Return-for-all-ICAEW-Firms,-and-office-QCR-template-for-all-firms,-including-no.aspx" class="ng-binding" style="">2019 ICAEW Annual Return for all ICAEW Firms, and office QCR template for all firms, including non-ICAEW Firms</a></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </pp-promotion>
+                                    </div>
+                                    <!-- end ngRepeat: promotion in Promotions -->
+                                    <!--Notifications part-->
+                                    <!-- ngRepeat: Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount) -->
+                                    <div ng-repeat="Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount)" style="border-style: solid; border-width: 1px; border-color: white;" class="ng-scope">
+                                       <pp-notification item="Read" class="ng-isolate-scope">
+                                          <div class="media">
+                                             <a href="#" ng-click="DiscardNotification()" style="float:right;">X</a><a class="pull-left" href=""><img class="media-object" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-news.png" alt="" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-news.png"></a>
+                                             <div class="media-body">
+                                                <p><a href="https://hwconnect.sharepoint.com/News/Pages/Annual-Health-and-Safety-Review-Due-2018.aspx" class="ng-binding" href="https://hwconnect.sharepoint.com/News/Pages/Annual-Health-and-Safety-Review-Due-2018.aspx">Annual Health and Safety Review Due 2018</a></p>
+                                                <ul class="list-inline list-unstyled">
+                                                   <li class="ng-binding"><a data-toggle="modal" data-username="i:0#.f|membership|teresa.scammell@hw.co.uk" data-target="#userprofile"><span class="hw-user-name ng-binding">Teresa Scammell</span></a>- Apr 20 2018</li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </pp-notification>
+                                    </div>
+                                    <!-- end ngRepeat: Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount) -->
+                                    <div ng-repeat="Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount)" style="border-style: solid; border-width: 1px; border-color: white;" class="ng-scope">
+                                       <pp-notification item="Read" class="ng-isolate-scope">
+                                          <div class="media">
+                                             <a href="#" ng-click="DiscardNotification()" style="float:right;">X</a><a class="pull-left" href=""><img class="media-object" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-news.png" alt="" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-news.png"></a>
+                                             <div class="media-body">
+                                                <p><a href="https://hwconnect.sharepoint.com/News/Pages/One-Magazine-Edition-52-Covering-Letter.aspx" class="ng-binding" href="https://hwconnect.sharepoint.com/News/Pages/One-Magazine-Edition-52-Covering-Letter.aspx">One Magazine Edition 52 Covering Letter</a></p>
+                                                <ul class="list-inline list-unstyled">
+                                                   <li class="ng-binding"><a data-toggle="modal" data-username="i:0#.f|membership|naomi.damnjanovic@hw.co.uk" data-target="#userprofile"><span class="hw-user-name ng-binding">Naomi Damnjanovic</span></a>- Apr 19 2018</li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </pp-notification>
+                                    </div>
+                                    <!-- end ngRepeat: Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount) -->
+                                    <div ng-repeat="Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount)" style="border-style: solid; border-width: 1px; border-color: white;" class="ng-scope">
+                                       <pp-notification item="Read" class="ng-isolate-scope">
+                                          <div class="media">
+                                             <a href="#" ng-click="DiscardNotification()" style="float:right;">X</a><a class="pull-left" href=""><img class="media-object" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/question-circle.png" alt="" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/question-circle.png"></a>
+                                             <div class="media-body">
+                                                <p><a href="https://hwconnect.sharepoint.com/QandA/Pages/Thread.aspx?qid=517" class="ng-binding" href="https://hwconnect.sharepoint.com/QandA/Pages/Thread.aspx?qid=517">Soft Drinks Industry Levy (Sugar Tax)</a></p>
+                                                <ul class="list-inline list-unstyled">
+                                                   <li class="ng-binding"><a data-toggle="modal" data-username="i:0#.f|membership|Carl Cleaver" data-target="#userprofile"><span class="hw-user-name ng-binding">Carl Cleaver</span></a>- Apr 18 2018</li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </pp-notification>
+                                    </div>
+                                    <!-- end ngRepeat: Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount) -->
+                                    <div ng-repeat="Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount)" style="border-style: solid; border-width: 1px; border-color: white;" class="ng-scope">
+                                       <pp-notification item="Read" class="ng-isolate-scope">
+                                          <div class="media">
+                                             <a href="#" ng-click="DiscardNotification()" style="float:right;">X</a><a class="pull-left" href=""><img class="media-object" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/question-circle.png" alt="" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/question-circle.png"></a>
+                                             <div class="media-body">
+                                                <p><a href="https://hwconnect.sharepoint.com/QandA/Pages/Thread.aspx?qid=516" class="ng-binding" href="https://hwconnect.sharepoint.com/QandA/Pages/Thread.aspx?qid=516">Offices undertaking audits of English Housing Associations</a></p>
+                                                <ul class="list-inline list-unstyled">
+                                                   <li class="ng-binding"><a data-toggle="modal" data-username="i:0#.f|membership|Tania Cregg" data-target="#userprofile"><span class="hw-user-name ng-binding">Tania Cregg</span></a>- Apr 16 2018</li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </pp-notification>
+                                    </div>
+                                    <!-- end ngRepeat: Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount) -->
+                                    <div ng-repeat="Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount)" style="border-style: solid; border-width: 1px; border-color: white;" class="ng-scope">
+                                       <pp-notification item="Read" class="ng-isolate-scope">
+                                          <div class="media">
+                                             <a href="#" ng-click="DiscardNotification()" style="float:right;">X</a><a class="pull-left" href=""><img class="media-object" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-news.png" alt="" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-news.png"></a>
+                                             <div class="media-body">
+                                                <p><a href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-2018-12---Increased-Audit-Thresholds-for-Co-operatives-and-Community-Benefit-Societies.aspx" class="ng-binding" href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-2018-12---Increased-Audit-Thresholds-for-Co-operatives-and-Community-Benefit-Societies.aspx">Intranet Update 2018.12 - Increased Audit Thresholds for Co-...</a></p>
+                                                <ul class="list-inline list-unstyled">
+                                                   <li class="ng-binding"><a data-toggle="modal" data-username="i:0#.f|membership|teresa.scammell@hw.co.uk" data-target="#userprofile"><span class="hw-user-name ng-binding">Teresa Scammell</span></a>- Apr 12 2018</li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </pp-notification>
+                                    </div>
+                                    <!-- end ngRepeat: Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount) -->
+                                    <div ng-repeat="Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount)" style="border-style: solid; border-width: 1px; border-color: white;" class="ng-scope">
+                                       <pp-notification item="Read" class="ng-isolate-scope">
+                                          <div class="media">
+                                             <a href="#" ng-click="DiscardNotification()" style="float:right;">X</a><a class="pull-left" href=""><img class="media-object" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-doc.jpg" alt="" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-doc.jpg"></a>
+                                             <div class="media-body">
+                                                <p><a href="https://hwconnect.sharepoint.com/Document/Office admin/Intranet Update Register/Intranet Updates Register.docx" class="ng-binding" href="https://hwconnect.sharepoint.com/Document/Office admin/Intranet Update Register/Intranet Updates Register.docx">Intranet Updates Register</a></p>
+                                                <ul class="list-inline list-unstyled">
+                                                   <li class="ng-binding"><a data-toggle="modal" data-username="i:0#.f|membership|teresa.scammell@hw.co.uk" data-target="#userprofile"><span class="hw-user-name ng-binding">tscammell@hwca.com</span></a>- Apr 12 2018</li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </pp-notification>
+                                    </div>
+                                    <!-- end ngRepeat: Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount) -->
+                                    <div ng-repeat="Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount)" style="border-style: solid; border-width: 1px; border-color: white;" class="ng-scope">
+                                       <pp-notification item="Read" class="ng-isolate-scope">
+                                          <div class="media">
+                                             <a href="#" ng-click="DiscardNotification()" style="float:right;">X</a><a class="pull-left" href=""><img class="media-object" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-news.png" alt="" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-news.png"></a>
+                                             <div class="media-body">
+                                                <p><a href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2018--11---Revised-Mercia-Registered-Social-Housing-Providers-(RSHP)-Special-Assignment-Manual.aspx" class="ng-binding" href="https://hwconnect.sharepoint.com/News/Pages/Intranet-Update-No-2018--11---Revised-Mercia-Registered-Social-Housing-Providers-(RSHP)-Special-Assignment-Manual.aspx">Intranet Update No 2018. 11 - Revised Mercia Registered Soci...</a></p>
+                                                <ul class="list-inline list-unstyled">
+                                                   <li class="ng-binding"><a data-toggle="modal" data-username="i:0#.f|membership|teresa.scammell@hw.co.uk" data-target="#userprofile"><span class="hw-user-name ng-binding">Teresa Scammell</span></a>- Apr 09 2018</li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </pp-notification>
+                                    </div>
+                                    <!-- end ngRepeat: Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount) -->
+                                    <div ng-repeat="Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount)" style="border-style: solid; border-width: 1px; border-color: white;" class="ng-scope">
+                                       <pp-notification item="Read" class="ng-isolate-scope">
+                                          <div class="media">
+                                             <a href="#" ng-click="DiscardNotification()" style="float:right;">X</a><a class="pull-left" href=""><img class="media-object" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-news.png" alt="" src="https://hwconnect.sharepoint.com/Style Library/HW/icons/icon-news.png"></a>
+                                             <div class="media-body">
+                                                <p><a href="https://hwconnect.sharepoint.com/News/Pages/Creator-File-to-be-downloaded---RSHP-.aspx" class="ng-binding" href="https://hwconnect.sharepoint.com/News/Pages/Creator-File-to-be-downloaded---RSHP-.aspx">Creator File to be downloaded - RSHP 10.0 For Attention of t...</a></p>
+                                                <ul class="list-inline list-unstyled">
+                                                   <li class="ng-binding"><a data-toggle="modal" data-username="i:0#.f|membership|teresa.scammell@hw.co.uk" data-target="#userprofile"><span class="hw-user-name ng-binding">Teresa Scammell</span></a>- Apr 09 2018</li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </pp-notification>
+                                    </div>
+                                    <!-- end ngRepeat: Read in needToRead | filter: { IsDismissed: false } | limitTo: (10 - Promotions.length - TopNewsByLocationCount) -->
+                                    <!--Show no new notifications message-->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- <h3>Things I need to read</h3>
+                           <div class="hw-need-to-read">
+                           	<div id="hw-need-to-read-content">
+                           	<div class="panel panel-default">
+                           		<div class="panel-body">
+                           			<div ng-repeat="Read in needToRead">
+                           				<div class="media">
+                           					<a class="pull-left" href="">
+                           						<img class="media-object" src="{{Read.logo}}" alt=""/>
+                           					</a>
+                           					<div class="media-body">
+                           						<p><a href="{{Read.Path}}">{{Read.Title}}</a></p>
+                           						<ul class="list-inline list-unstyled">
+                           							<li><a data-toggle="modal" data-username="{{Read.username}}" data-target="#userprofile"><span class="hw-user-name">{{Read.Author}}</span></a>- {{Read.Write}}</li>
+                           						</ul>
+                           					</div>
+                           				</div>                                       
+                           			</div>
+                           		</div>
+                           		<div ng-click="onClickToOpenPopup()" ng-show="isnofav" class="opacity-block"><p>You have not subscribed to any topics at the moment. To subscribe to a topic, please select an option from the topic menu and hit the subscribe button.</p></div>
+                           	</div>
+                           	</div>
+                           	<div class="col-md-12">
+                           		<div class="row">
+                           			<a href="#"  ng-click="onClickToOpenPopup()" class="pull-left hw-link-1">Manage Topics and Interests</a>
+                           			<a href="{{ThingsViewAll}}" target="_blank" class="pull-right hw-link-1">View all</a>
+                           		</div>
+                           	</div>
+                           </div> -->
+                     </div>
+                  </div>
+               </div>
+      </div>
+      </section>
+	  
+	  <!-- My Links -->
+	  <section id="myLinks" class="section">
+		 <h2>My Links</h2>
+	  </section>	  
+	 
+	  
+	  <!-- My Planner Tasks -->
+	 
+		<footer id="footer">
+		   <section class="section">
+			  <div class="container">
+				 <div class="col-left">
+					<img src="img/hw-logo-footer.png" alt="Haines Watts" />
+					<span class="copyright">
+					Haines Watts Group 2017
+					</span>
+				 </div>
+				 <div class="col-right">
+					<h5>		
+					   Page owner Content Formula - 1
+					</h5>
+				 </div>
+				 <div class="clearfix">
+				 </div>
+			  </div>
+			  <div class="clearfix"></div>
+		   </section>
+		</footer>      
+<div class="scrollBarHolder">
+		  <div id="scrollBar" style="width: 67.7966%;"></div>
+		  </div>
+      </div>
+      </main>
+      </div>
+      <!-- CODE <div id="overlay">
+         <div class="wrap">
+             <img src="#">
+             <p>caption comes here</p>
+             <a href="#" class="close">&times;</a>
+         </div>
+         </div> -->
+      <!-- using jquery cdn	 -->
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+         crossorigin="anonymous"></script>
+      <!-- using custom js -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>

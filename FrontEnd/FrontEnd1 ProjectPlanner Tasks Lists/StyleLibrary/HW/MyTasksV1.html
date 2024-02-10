@@ -1,0 +1,151 @@
+﻿ 
+<!--  /**************************************** -->
+<!--  21/06/2019 MY TASKS PLANNER START         -->
+<!-- *****************************************/ -->
+
+<!-- 1 EMBED BARIOL FONTS -->
+<link rel="stylesheet" href="https://hwconnect.sharepoint.com/:u:/r/sites/hwstage/Style%20Library/HW/css/fonts/fonts.css" />
+<!-- 2 EMBED FILETR BY JAVASCRIPT -->
+<script type="text/javascript" src="https://hwconnect.sharepoint.com/:u:/r/sites/hwstage/Style%20Library/HW/js/taskfilters.js"></script>
+
+ 
+<div class="breadcrumb">
+    <div class="container">
+        <h1 style="text-align:center; font-family:'Bariol Regular',sans-serif; padding:60px; color:#000">Tasks</h1>
+    </div>
+</div>
+
+<section id="myPlannerTasks" class="section">
+    <div class="container">
+
+        <!-- create a task -->
+        <a class="btn btn-createTask" href="https://hwconnect.sharepoint.com/Lists/Admin%20Tasks/NewForm.aspx?Source=%2FPages%2FMy-Created-Tasks%2Easpx%3Fsuccess%3D1&RootFolder=" target="_blank">
+            <span class="glyphicon glyphicon-remove-circle"></span>Create task
+        </a>
+        <!-- 1 Main Tabs -->
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#menu1">Tasks assigned to me</a></li>
+            <li><a data-toggle="tab" href="#menu2">My tasks</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <!-- (1) TASKS ASSIGNED TO ME -->
+            <div id="menu1" class="tab-pane fade in active">
+                <p>Here you will find a list of tasks that have been assigned to you and require your attention. You should mark these items as complete once you have completed them</p>
+                <!--1 Filters  -->
+                <div class="myTasksContainerFilters">
+                    <label>Filter</label>
+                    <div class="select">
+                        <select type="search" class="select-table-filter" data-table="tasks-table">
+                            <option value="">All</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Incomplete">In progress</option>
+                        </select>
+                    </div>
+
+                </div>
+                <!--2 Tasks List  -->
+                <div class="myTasksContainer">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th>Assigned To</th>
+                                <th>Task Title</th>
+                                <th>Description</th>
+                                <th>Due Date</th>
+                                <th>Task Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Smith</td>
+                                <td><a href="#">Task title</a></td>
+                                <td><p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p></td>
+                                <td>12 Jun 2019</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>John Smith</td>
+                                <td><a href="#">Task title</a></td>
+                                <td><p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p></td>
+                                <td>12 Jun 2019</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>John Smith</td>
+                                <td><a href="#">Task title</a></td>
+                                <td><p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p></td>
+                                <td>12 Jun 2019</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>John Smith</td>
+                                <td><a href="#">Task title</a></td>
+                                <td><p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p></td>
+                                <td>12 Jun 2019</td>
+                                <td><span class="status">Incomplete</span></td>
+                            </tr>
+                            <tr>
+                                <td>John Smith</td>
+                                <td><a href="#">Task title</a></td>
+                                <td><p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p></td>
+                                <td>12 Jun 2019</td>
+                                <td><span class="status">Incomplete</span></td>
+                            </tr>
+                            <tr>
+                                <td>John Smith</td>
+                                <td><a href="#">Task title</a></td>
+                                <td><p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p></td>
+                                <td>12 Jun 2019</td>
+                                <td><span class="status">Incomplete</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- (2) MY TASKS ASSIGNED TO OTHER USERS -->
+            <div id="menu2" class="tab-pane fade">
+                <!--1 Filters  -->
+                <p>The list below shows all the outstanding tasks you have created and assigned to other Haines Watts users, along with the task status. You can filter and sort on the column names to narrow the list of tasks.</p>
+                <div class="myTasksContainerFilters">
+                    <label>Filter</label>
+                    <div class="select">
+                        <select type="search" class="select-table-filter" data-table="tasks-table">
+                            <option value="">All</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Incomplete">In progress</option>
+                        </select>
+                    </div>
+                </div>
+                <!--2 Tasks List  -->
+                <div class="myTasksContainer">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th>Assigned To</th>
+                                <th>Task Title</th>
+                                <th>Description</th>
+                                <th>Due Date</th>
+                                <th>Task Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="5" style="text-align:center">
+                                    There are no items to show in this view of the "AdminTask" list.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</section>
+
+ 
+<!--  /**************************************** -->
+<!--  21/06/2019 MY TASKS PLANNER END           -->
+<!-- *****************************************/ -->

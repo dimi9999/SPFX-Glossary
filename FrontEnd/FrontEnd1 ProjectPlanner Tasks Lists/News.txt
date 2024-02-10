@@ -1,0 +1,31 @@
+1) Sticky news
+------------------------
+
+Page url: https://hwconnect.sharepoint.com/sites/hwstage
+
+1) Remove One Local News
+2) Add the Front End
+3) The featured tag will appear on a news block once the new article page is tagged as featured
+4) If 3 regional news will be tagged as featured only the ;atest one will display
+5) The font weight of the button should be BOLD
+6) The font is the site STAYS ARIAL (We can review this later as changing to bariol takes 1 second)
+7) Make sure the button view all news is Styled and links to the news as per current site
+
+
+2) My Tasks
+------------------------
+Page url: https://hwconnect.sharepoint.com/sites/hwstage/Pages/YourTasks.aspx
+
+For the mytasks I will need help to display
+
+- The assigned by person
+- The description
+- The date
+
+Can we please have the following tasks sorted out and specified as soon as possible?
+
+2) Access to the graph from the client
+3) We need to specify with  how the create button will work
+
+  
+
