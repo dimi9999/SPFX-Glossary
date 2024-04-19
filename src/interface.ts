@@ -15,5 +15,6 @@ export interface IGlossary {
     ApprovalStatus: ChoiceFieldFormatType;
     Synonyms:string;
     Comments:string;
+    Created:string;
 
 }

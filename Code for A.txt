@@ -13,23 +13,17 @@ const Glossary = (props: IGlossaryProps) => {
 
   const [glossaryItems, setGlossaryItems] = React.useState<IGlossary[]>([]);
   const [currentPage, setCurrentPage] = React.useState<number>(1);
-  const pageSize = 250; // Number of Glossary Items to display 
+  const pageSize = 1000; // Number of Glossary Items to display 
 
   const getGlossaryItems = async () => {
     try {
       const skip = (currentPage - 1) * pageSize;
-      const items = await _sp.web.lists.getByTitle(LIST_NAME).items
+     //const items = await _sp.web.lists.getByTitle(LIST_NAME).items.orderBy('TopFilter', true).top(pageSize).skip(skip)();
+     const items = await _sp.web.lists.getByTitle(LIST_NAME).items
+      .filter(`TopFilter eq 'A'`)
       .orderBy('TopFilter', true)
-      .orderBy('Created', false)
-       
-      .top(pageSize).skip(skip)();
-
-      
-   //  const items = await _sp.web.lists.getByTitle(LIST_NAME).items
-   //   .filter(`TopFilter eq 'A'`)
-   //   .orderBy('TopFilter', true)
-   //   .top(pageSize)
-   //   .skip(skip)();
+      .top(pageSize)
+      .skip(skip)();
 
       setGlossaryItems(
         items.map((item: any) => ({
@@ -57,24 +51,14 @@ const Glossary = (props: IGlossaryProps) => {
     getGlossaryItems();
   }, [currentPage]);
 
-  const totalPages = Math.ceil(10000 / pageSize);
+  const totalPages = Math.ceil(9000 / pageSize);
+
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
   };
 
   return (
     <div className={styles.glossary}>
-
-       {/* Pager component */}
-       <div className={styles.pager}>
-        <button disabled={currentPage === 1} onClick={() => handlePageChange(currentPage - 1)}>
-          Previous
-        </button>
-       {/* <span>{currentPage}</span> */}
-        <button disabled={currentPage === totalPages} onClick={() => handlePageChange(currentPage + 1)}>
-          Next
-        </button>
-      </div>
       {/* Render your glossary items here */}
       {glossaryItems.map((item: IGlossary, index: number) => (
        <div key={index} className={styles.GlossaryItemBox}>
@@ -82,16 +66,23 @@ const Glossary = (props: IGlossaryProps) => {
        <div className={styles.GlossaryImage}>
         <img src="https://eastwestrailwaycouk.sharepoint.com/:i:/r/Integrated%20Management%20System/SiteAssets/IMS/img/EWR-Portal-Glossary-Banner-Background.jpg?csf=1&web=1&e=PWmFfx" alt="IMS Glossary" />
         {/* Glossary Letter*/}
-        <span className={styles.GlossaryLetter}>
-         <span className={styles.letter}>{item.TopFilter}</span>
-         <span className={styles.title}>{item.Title}</span>
-         <span className={styles.date}> {item.Created}</span>
-         <button>Read more</button>
-         </span>
+    
+        <span className={styles.GlossaryLetter}>{item.TopFilter}, {item.Title}, {item.Created}</span>
          </div>
       </div>
         
       ))}
+
+      {/* Pager component */}
+      <div className={styles.pager}>
+        <button disabled={currentPage === 1} onClick={() => handlePageChange(currentPage - 1)}>
+          Previous
+        </button>
+        <span>{currentPage}</span>
+        <button disabled={currentPage === totalPages} onClick={() => handlePageChange(currentPage + 1)}>
+          Next
+        </button>
+      </div>
     </div>
   );
 };

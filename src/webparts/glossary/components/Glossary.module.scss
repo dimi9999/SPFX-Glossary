@@ -5,6 +5,28 @@ $font-family_1: 'calibriregular',sans-serif;
 $font-family_2: century gothic;
 $font-family_3: 'Century Gothic';
 
+// background colours
+// Colours
+$black: #000;
+$white: #fff;
+$blue: #283282;
+$lightblue: #65b4ff;
+$extralightblue: #e0f0ff;
+$paleblue:#e9f2ff;
+$yellow: rgb(251, 180, 10); // #fbb40a
+$orange: rgb(231, 117, 10);
+$red: #ff2d46;
+$tomato: tomato; 
+$green: #6ec895;
+$gray: #eeeeee;
+$darkgray: #ccc;
+
+// Additional Colours
+$darkblue: #060725;
+$darkgreen: #1a6e32;
+$royalblue: #1750ff;
+$palered: #cd1c24;
+
 .glossary {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -56,25 +78,73 @@ $font-family_3: 'Century Gothic';
 	}
 	.GlossaryImage {
 		position: relative;
-    flex-basis:40%;
+    	flex-basis:40%;
 		img {
 			max-width: 100%;
 		}
 	}
 	.GlossaryLetter {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		color: $color_1;
-		font-size: 20px;
+		width: auto;
+		color: $white;
 		font-family: GTWalsheimProBold;
-		font-weight: bold;
-		translate: -50% -30%;
+		font-size: 20px;
+		font-weight: 700;
+		left: 46%;
+		margin: 10px;
+		position: absolute;
+		top: 44%;
+		translate: -51% -40%;
+
+		& span {
+			display: block;
+			font-family: GTWalsheimProBold;
+		}
+		& .title {
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			display: -webkit-box;
+			font-size: inherit;
+			margin-bottom: 15px;
+			overflow: hidden;
+			height: 49px;
+		}
+
+		& .letter {
+			font-size:70px;
+		}
+
+		& .date {
+			font-size:12px;
+		}
+
+		& button {
+			position: relative;
+			color:$white;
+			transition: 0.3s ease-in all;
+			background-color:$darkgreen;
+			font-weight: bold;
+			border-radius: 50px;
+			color: $white;
+			font-family: 'Century Gothic';
+			font-size: 12px;
+			font-weight: 700;
+			margin: 10px 0 0;
+			border: none;
+			padding: 10px 30px;
+			position: relative;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $royalblue;
+			}
+			
+		}
+		
 	}
 	.GlossaryContent {
 		padding: 30px;
 		letter-spacing: 1px;
-    flex-basis:60%;
+    	flex-basis:60%;
 	}
 	h2 {
 		font-family: $font-family_3;
@@ -202,6 +272,30 @@ $font-family_3: 'Century Gothic';
 	 // Pager
 	 .pager {
 		width: 100%;
+		text-align: center;
+		// Buttons
+		& button {
+			position: relative;
+			cursor: pointer;
+			color:$white;
+			background:$white;
+			font-weight: bold;
+			border-radius: 50px;
+			color: $green;
+			font-weight: 700;
+			padding: 10px 30px;
+			margin: 9px 10px;
+			font-size: 18px;
+			font-family: 'Century Gothic';
+			border:none;
+			outline: none;
+	
+
+			&:disabled {
+				opacity:0.5;
+				cursor: disabled;
+			}
+		}
 	 }
   // Popup Styles
 }
@@ -209,6 +303,25 @@ $font-family_3: 'Century Gothic';
 	.glossary {
 		.GlossaryItemBox {
 			flex-basis: 50% !important;
+			 
+		}
+		.GlossaryLetter {
+			& .letter {
+				display:none;
+			}
 		}
 	}
+}
+
+@media only screen and (max-width:600px) {
+	.glossary {
+		.GlossaryItemBox {
+			flex-basis: 100% !important;
+			 
+		}}
+	}
+// Make the top section background green
+div[data-automation-id="CanvasZone"],
+div[data-automation-id="CanvasLayout"]   {
+background:url(https://eastwestrailwaycouk.sharepoint.com/:i:/r/Integrated%20Management%20System/SiteAssets/IMS/img/EWR-Glossary-BGMain.jpg?csf=1&web=1&e=Z9JfJe) top center no-repeat!important;
 }
