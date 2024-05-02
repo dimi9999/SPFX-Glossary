@@ -22,7 +22,10 @@
     "description": { "default": "Glossary description" },
     "officeFabricIconFontName": "Library",
     "properties": {
-      "description": "Glossary"
+      "description": "Glossary",
+      "letter":"letter"
     }
   }]
 }
+
+

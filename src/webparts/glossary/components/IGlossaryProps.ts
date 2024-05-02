@@ -8,4 +8,8 @@ export interface IGlossaryProps {
   userDisplayName: string;
   context: WebPartContext;
   listGuid: string;
+  letter: string;
+  list: string; // Stores the list ID
+  column: string; // Stores the single column property (property can be configured)
+  multiColumn: string; // Stores the multi column property (property can be configured)
 }

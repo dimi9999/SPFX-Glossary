@@ -1,4 +1,5 @@
 @import '~@fluentui/react/dist/sass/References.scss';
+@import './GlossaryPopup.module.scss';
 
 $color_1: #fff;
 $font-family_1: 'calibriregular',sans-serif;
@@ -53,9 +54,9 @@ $palered: #cd1c24;
 		font-family: $font-family_1;
 		flex-basis: 25%;
     .GlossaryImage {
-      position: relative;
-      flex-basis:100%;
-	  padding:10px;
+		position: relative;
+		flex-basis:100%;
+		padding:10px;
       
       img {
         max-width: 100%;
@@ -106,7 +107,6 @@ $palered: #cd1c24;
 			font-size: inherit;
 			margin-bottom: 15px;
 			overflow: hidden;
-			height: 49px;
 		}
 
 		& .letter {

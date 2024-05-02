@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @font-face {
+        font-family: 'calibriregular';
+        src: url('https://eastwestrailwaycouk.sharepoint.com/sites/EIPM/SiteAssets/EWR/fonts/calibri-webfont.woff2') format('woff2'),
+          url('https://eastwestrailwaycouk.sharepoint.com/sites/EIPM/SiteAssets/EWR/fonts/calibri-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        background: #283282;
+        font-family: calibriregular;
+      }
+
+      .GlossaryPopup {
+        background: #fff;
+      }
+
+       .GlossaryPopup .glossary,
+      .GlossaryPopup .glossary .GlossaryItem {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      #GlossaryContainer .GlossaryContent {
+        padding: 30px;
+      }
+
+      #GlossaryContainer h2:after {
+        content: '';
+        width: 60px;
+        height: 4px;
+        display: block;
+        background: #fbb40a;
+        margin-top: 14px;
+      }
+
+      .GlossaryPopup .glossary {
+        flex-wrap: wrap;
+      }
+
+      .GlossaryPopup .glossary .GlossaryItem {
+        flex-basis: 50%;
+      }
+
+      @media only screen and (max-width:880px) {
+        .GlossaryPopup .glossary .GlossaryItem {
+          flex-basis: 100% !important;
+        }
+      }
+
+      .GlossaryPopup .glossary .GlossaryImage {
+        position: relative;
+      }
+
+      .GlossaryPopup .glossary .GlossaryImage img {
+        max-width: 100%;
+      }
+
+      .GlossaryPopup .glossary .GlossaryLetter {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: #fff;
+        font-size: 120px;
+        font-family: century gothic;
+        font-weight: bold;
+        translate: -50% -50%;
+      }
+
+      .GlossaryPopup .glossary .GlossaryContent {
+        padding: 30px;
+        letter-spacing: 1px;
+      }
+
+      .GlossaryPopup .glossary h2 {
+        font-family: 'Century Gothic';
+        font-weight: bold;
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+      }
+
+      .GlossaryPopup .glossary h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 30px;
+        font-size: 16px;
+        font-weight: normal;
+      }
+
+      .GlossaryPopup .glossary .btn-primary {
+        background: #6ec896;
+        color: #fff;
+      }
+
+      #GlossaryContainer .btn-primary:hover {
+        transition: 0.3s ease-in all;
+        background: #64b4ff;
+      }
+
+      .GlossaryPopup .glossary .btn-primary {
+        background: #6ec896;
+        color: #fff;
+        padding: 15px 30px;
+      }
+
+      .GlossaryPopup .glossary .Tags,
+      .GlossaryPopup .glossary .Category,
+      .GlossaryPopup .glossary .Definition,
+      .GlossaryPopup .glossary .abbr {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 30px 0 0;
+      }
+
+      .GlossaryPopup .glossary .Tags .Title,
+      .GlossaryPopup .glossary .Category .Title,
+      .GlossaryPopup .glossary .Definition .Title,
+      .GlossaryPopup .glossary .abbr .Title {
+        font-weight: bold;
+        flex-basis: 25%;
+      }
+
+      .GlossaryPopup .glossary .abbr h3 {
+        margin-lefT: 0;
+      }
+
+      .GlossaryPopup .glossary .Tags .Content,
+      .GlossaryPopup .glossary .Category .Content,
+      .GlossaryPopup .glossary .Definition .Content,
+      .GlossaryPopup .glossary .abbr .Content {
+        flex-basis: 75%;
+      }
+
+      .GlossaryPopup .glossary .Tags ol,
+      .GlossaryPopup .glossary .Category ol,
+      .GlossaryPopup .glossary .Definition ol {
+        margin: 0 0 1.5em;
+        padding: 0;
+        counter-reset: item;
+      }
+
+      .GlossaryPopup .glossary .Tags ol>li,
+      .GlossaryPopup .glossary .Category ol>li,
+      .GlossaryPopup .glossary .Definition ol>li {
+        margin: 0;
+        padding: 0 0 0 2em;
+        text-indent: -2em;
+        list-style-type: none;
+        counter-increment: item;
+        letter-spacing: 1px;
+      }
+
+      .GlossaryPopup .glossary .Tags ol>li:before,
+      .GlossaryPopup .glossary .Category ol>li:before,
+      .GlossaryPopup .glossary .Definition ol>li:before {
+        display: inline-block;
+        width: 1.5em;
+        padding-right: 0.5em;
+        font-weight: bold;
+        text-align: right;
+        content: counter(item) ".";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="GlossaryPopup">
+      <div id="GlossaryContainer">
+        <div class="glossary">
+          <!-- item -->
+          <div class="GlossaryItem">
+            <div class="GlossaryContent">
+              <!-- title -->
+              <h2>A428 DCO</h2>
+              <!-- Abbreviation -->
+              <div class="abbr">
+                <h3 class="Title">Abbreviation: </h3>
+                <div class="Content"> n/a </div>
+              </div>
+              <!-- tags -->
+              <div class="Tags">
+                <div class="Title">Tags:</div>
+                <div class="Content">
+                  <ol>
+                    <li>Developments Consent Order </li>
+                    <li>Survey</li>
+                    <li>Sparx EA</li>
+                  </ol>
+                </div>
+              </div>
+              <!-- category -->
+              <div class="Category">
+                <div class="Title">Category:</div>
+                <div class="Content">
+                  <ol>
+                    <li>Consents</li>
+                    <li>Environment</li>
+                    <li>Public engagement and consultation</li>
+                  </ol>
+                </div>
+              </div>
+              <!-- definition -->
+              <div class="Definition">
+                <div class="Title">Definition:</div>
+                <div class="Content">
+                  <p> "National Highways (formerly Highways England) A428 Black Cat to Caxton Gibbet Development Consent Order 2022. </p>
+                </div>
+              </div>
+              <p>
+                <a class="btn-primary" href="#">Close Window</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

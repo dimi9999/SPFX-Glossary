@@ -1,0 +1,307 @@
+$color_1: #fff;
+$font-family_1: century gothic;
+$font-family_2: 'Century Gothic';
+
+.GlossaryPopup {
+	background-image: url(https://eastwestrailwaycouk.sharepoint.com/:i:/r/Integrated%20Management%20System/SiteAssets/IMS/img/GlossaryBackground.png?csf=1&web=1&e=yEHiXs);
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-color: #fff;
+    background-position: right 30px;
+    height: auto;
+    left: 5%;
+    position: fixed;
+    top: 12%;
+    width: 93%;
+    z-index: 99;
+	max-height: 800px;
+    overflow: auto;
+
+	& .CategoryWord {
+		 font-family: 'Century Gothic';
+	}
+
+	& * {
+		font-family: 'Century Gothic';
+	}
+
+	& p {
+		font-family: 'Century Gothic';
+		margin:0;
+		font-size: 16px;
+	}
+
+	& .Content {
+		font-family: 'Century Gothic';
+		margin:0;
+		font-size: 16px;
+	}
+
+	& strong {
+		font-size:16px;
+	}
+
+	& .EmailAddress {
+		background-color:#6ec895;
+		color:white;
+		font-weight: 700;
+		padding:10px 20px;
+		text-decoration: none;
+		display:inline-block;
+		border-radius: 50px;
+		font-family: 'Century Gothic';
+
+		&:hover {
+			color:white;
+		}
+	}
+
+	& .GlossaryPopupFooter {
+		background: url(https://eastwestrailwaycouk.sharepoint.com/:i:/r/Integrated%20Management%20System/SiteAssets/IMS/img/EWR-Glossary-Footer-BackGround.png?csf=1&web=1&e=CYpu0g) 100% 100% no-repeat;
+		min-height: 200px;
+		background-size: cover;
+	}
+	.glossary {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		.GlossaryItem {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			align-items: flex-start;
+			flex-basis: 100%;
+		}
+		.GlossaryImage {
+			position: relative;
+			img {
+				max-width: 100%;
+			}
+		}
+		.GlossaryLetter {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			color: $color_1;
+			font-size: 120px;
+			font-family: $font-family_1;
+			font-weight: bold;
+			translate: -50% -50%;
+		}
+		.GlossaryContent {
+			padding: 30px 30px 0;
+			letter-spacing: 1px;
+		}
+		h2 {
+			font-family: $font-family_2;
+			font-weight: bold;
+			font-size: 40px;
+			margin-top: 0;
+			margin-bottom: 0;
+			letter-spacing: 1px;
+
+			&:after {
+				content: '';
+				width: 60px;
+				height: 4px;
+				display: block;
+				background: #1da3f1;
+				margin-top: 14px;
+			}
+		}
+		h3 {
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-left: 30px;
+			font-size: 16px;
+			font-weight: normal;
+		}
+		.btnprimary {
+			background: #ff2d46;
+			color: $color_1;
+			padding: 15px 30px;
+			margin-top:20px;
+			display:inline-block;
+			font-family: 'Century Gothic';
+			font-weight: bold;
+			text-decoration: none;
+			border-radius: 50px;
+			&:hover {
+				background: #1da3f1;
+			}
+		}
+		.Tags {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			margin: 15px 0 0;
+			.Title {
+				font-weight: bold;
+				flex-basis: 25%;
+			}
+			.Content {
+				flex-basis: 75%;
+			}
+			ol {
+				margin: 0 0 1.5em;
+				padding: 0;
+				counter-reset: item;
+				>li {
+					margin: 0;
+					padding: 0 0 0 2em;
+					text-indent: -2em;
+					list-style-type: none;
+					counter-increment: item;
+					letter-spacing: 1px;
+					&:before {
+						display: inline-block;
+						width: 1.5em;
+						padding-right: 0.5em;
+						font-weight: bold;
+						text-align: right;
+						content: counter(item) ".";
+					}
+				}
+			}
+		}
+		.Category {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			margin: 15px 0 0;
+			.Title {
+				font-weight: bold;
+				flex-basis: 25%;
+			}
+			.Content {
+				flex-basis: 75%;
+			}
+			ol {
+				margin: 0 0 1.5em;
+				padding: 0;
+				counter-reset: item;
+				>li {
+					margin: 0;
+					padding: 0 0 0 2em;
+					text-indent: -2em;
+					list-style-type: none;
+					counter-increment: item;
+					letter-spacing: 1px;
+					&:before {
+						display: inline-block;
+						width: 1.5em;
+						padding-right: 0.5em;
+						font-weight: bold;
+						text-align: right;
+						content: counter(item) ".";
+					}
+				}
+			}
+		}
+		.Definition {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			margin: 15px 0 0;
+			.Title {
+				font-weight: bold;
+				flex-basis: 25%;
+			}
+			.Content {
+				flex-basis: 75%;
+			}
+			ol {
+				margin: 0 0 1.5em;
+				padding: 0;
+				counter-reset: item;
+				>li {
+					margin: 0;
+					padding: 0 0 0 2em;
+					text-indent: -2em;
+					list-style-type: none;
+					counter-increment: item;
+					letter-spacing: 1px;
+					&:before {
+						display: inline-block;
+						width: 1.5em;
+						padding-right: 0.5em;
+						font-weight: bold;
+						text-align: right;
+						content: counter(item) ".";
+					}
+				}
+			}
+		}
+		.abbr {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			margin: 15px 0 0;
+			.Title {
+				font-weight: bold;
+				flex-basis: 25%;
+			}
+			h3 {
+				margin-left: 0;
+			}
+			.Content {
+				flex-basis: 75%;
+			}
+		}
+	}
+}
+#GlossaryContainer {
+	.GlossaryContent {
+		padding: 30px;
+	}
+	h2 {
+		&:after {
+			content: '';
+			width: 60px;
+			height: 4px;
+			display: block;
+			background: #fbb40a;
+			margin-top: 14px;
+		}
+	}
+	.btn-primary {
+		&:hover {
+			transition: 0.3s ease-in all;
+			background: #64b4ff;
+		}
+	}
+}
+@media only screen and (max-width:880px) {
+	.GlossaryPopup {
+		.glossary {
+			.GlossaryItem {
+				flex-basis: 100% !important;
+			}
+		}
+	}
+}
+
+.GlossaryPopupOverlay {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgb(0, 16, 85, 0.8);
+	transition:0.4 ease-in all;
+}
+
+@media only screen and (max-height:700px) {
+	.GlossaryPopup {
+		left: 0!important;
+		top: 0!important;
+		width: 100%!important;
+		z-index: 99;
+		max-height: 700px;
+		overflow: auto;
+	}
+}

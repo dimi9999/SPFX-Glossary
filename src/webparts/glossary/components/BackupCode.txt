@@ -122,6 +122,29 @@ export default class GlossaryWebPart extends BaseClientSideWebPart<IGlossaryWebP
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
                 }),
+                PropertyFieldColumnPicker('column', {
+                  label: 'Select a column',
+                  context: this.context as any,
+                  selectedColumn: this.properties.column,
+                  disabled: false,
+                  orderBy: PropertyFieldColumnPickerOrderBy.Title,
+                  onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
+                  properties: this.properties,
+                  deferredValidationTime: 0,
+                  key: 'columnPickerFieldId',
+                  displayHiddenColumns: false 
+              }),
+                
+                PropertyPaneDropdown('letter',{
+                  label: 'Select Letter',
+                    options: [
+                      {key: '1', text: 'A'},
+                      {key: '2', text: 'B'},
+                      {key: '3', text: 'C'},
+                      {key: '4', text: 'D'},
+                      {key: '5', text: 'E'}
+                ]}),
+ 
 
                 PropertyFieldListPicker('lists', {
                   label: 'Select a list',
@@ -135,16 +158,8 @@ export default class GlossaryWebPart extends BaseClientSideWebPart<IGlossaryWebP
                  // onGetErrorMessage: null,
                   deferredValidationTime: 0,
                   key: 'listPickerFieldId'
-                }),
-                PropertyPaneDropdown('letter',{
-                  label: 'Select Letter',
-                    options: [
-                      {key: '1', text: 'A'},
-                      {key: '2', text: 'B'},
-                      {key: '3', text: 'C'},
-                      {key: '4', text: 'D'},
-                      {key: '5', text: 'E'}
-                ]}),
+                })
+
                
               ]
             }
