@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "a4f74e7b-7eff-4070-ae1c-feebcbc319bd",
+  "id": "d7c5e8ac-89da-4efc-a002-4705ad47396a",
   "alias": "GlossaryWebPart",
   "componentType": "WebPart",
 
@@ -18,11 +18,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
     "group": { "default": "Advanced" },
-    "title": { "default": "Glossary" },
+    "title": { "default": "Glossary G" },
     "description": { "default": "Glossary description" },
     "officeFabricIconFontName": "Library",
     "properties": {
-      "description": "Glossary",
+      "description": "Glossary G",
       "letter":"letter"
     }
   }]

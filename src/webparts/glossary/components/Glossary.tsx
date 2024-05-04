@@ -28,10 +28,9 @@ const Glossary = (props: IGlossaryProps) => {
       const items = await _sp.web.lists
         .getByTitle(LIST_NAME)
         .items.orderBy("TopFilter", true)
-        .filter(`TopFilter eq 'A'`)
-         // .filter("OData__ModerationStatus eq 0") // Filter by approval status values (0 for Approved, 2 for Pending)
-         //  .orderBy('Created', false)
-             .top(pageSize)
+         .filter(`TopFilter eq 'G' and OData__ModerationStatus eq 0`)
+         // .orderBy('Created', false)
+            .top(pageSize)
          //.top(10)
            .skip(skip)();
 
@@ -162,6 +161,7 @@ const Glossary = (props: IGlossaryProps) => {
                         </div>
                       </div>
                        {/*  synonyms */}
+                       {item.Synonyms && (
                        <div className={styles.Definition}>
                         <div className={styles.Title}><strong>Synonyms:</strong></div>
                         <div className={styles.Content}>
@@ -170,7 +170,9 @@ const Glossary = (props: IGlossaryProps) => {
                           </p>
                         </div>
                       </div>
+                      )}
                        {/*  Visibility */}
+                       {item.Visibility && (
                        <div className={styles.Definition}>
                         <div className={styles.Title}><strong>Visibility:</strong></div>
                         <div className={styles.Content}>
@@ -179,6 +181,7 @@ const Glossary = (props: IGlossaryProps) => {
                           </p>
                         </div>
                       </div>
+                      )}
                        {/*  Export */}
                        {item.EAGlossaryExport && (
                        <div className={styles.Definition}>

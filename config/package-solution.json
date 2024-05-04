@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "glossary-client-side-solution",
-    "id": "230d8252-05d8-487b-a764-726e04ec88e1",
+    "name": "glossary-client-side-solution-G",
+    "id": "4a8965dc-3b18-4d53-aeb4-a66fa9a9f17e",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
@@ -35,6 +35,7 @@
     ]
   },
   "paths": {
-    "zippedPackage": "solution/glossary.sppkg"
+    "zippedPackage": "solution/glossaryG.sppkg"
   }
 }
+
